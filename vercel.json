@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "installCommand": "pnpm install",
+  "buildCommand": "tsc -b && vite build",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/proxy",
+      "destination": "/api/proxy"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
